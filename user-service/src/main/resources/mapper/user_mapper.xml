@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yz.mapper.UserMapper">
+
+    <resultMap id="BaseResultMap" type="com.yz.pojo.User">
+        <id javaType="java.lang.Long" jdbcType="BIGINT"/>
+        <result column="name" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result column="password" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result column="alias" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result column="balance" javaType="java.lang.Double" jdbcType="DOUBLE"/>
+    </resultMap>
+
+    <insert id="save" parameterType="com.yz.pojo.User" useGeneratedKeys="true">
+        insert into user (`name`, `password`, `alias`, `balance`)
+        values (#{user.name}, #{user.password}, #{user.alias}, #{user.balance})
+    </insert>
+</mapper>
