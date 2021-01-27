@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yz.dao.IntegralDao">
+
+    <!--  新增积分记录  -->
+    <insert id="save" parameterType="com.yz.pojo.Integral" useGeneratedKeys="true" keyProperty="id">
+        insert into integral (`user_id`, `user_name`, `type`, `numbers_of_integral`)
+        values (#{integral.userId},
+                #{integral.userName},
+                #{integral.type},
+                #{integral.numbersOfIntegral})
+    </insert>
+
+    <!--  给用户增加积分  -->
+    <update id="incrementByUserId">
+        update integral
+        set numbers_of_integral = numbers_of_integral + #{integral}
+        where user_id = #{userId}
+    </update>
+</mapper>

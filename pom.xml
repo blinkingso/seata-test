@@ -6,6 +6,7 @@
         <module>discovery-center</module>
         <module>integral-service</module>
         <module>user-service</module>
+        <module>seata-business-tester</module>
     </modules>
 
     <parent>

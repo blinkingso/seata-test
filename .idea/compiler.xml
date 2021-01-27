@@ -6,14 +6,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="integral-service" />
         <module name="discovery-center" />
+        <module name="seata-business-tester" />
         <module name="user-service" />
+        <module name="integral-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="discovery-center" target="11" />
       <module name="integral-service" target="11" />
+      <module name="seata-business-tester" target="11" />
       <module name="seata-test" target="11" />
       <module name="user-service" target="11" />
     </bytecodeTargetLevel>
@@ -22,6 +24,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="discovery-center" options="-parameters" />
       <module name="integral-service" options="-parameters" />
+      <module name="seata-business-tester" options="-parameters" />
       <module name="user-service" options="-parameters" />
     </option>
   </component>

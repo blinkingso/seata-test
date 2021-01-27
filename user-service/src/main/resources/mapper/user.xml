@@ -5,7 +5,7 @@
 <mapper namespace="com.yz.mapper.UserMapper">
 
     <resultMap id="BaseResultMap" type="com.yz.pojo.User">
-        <id javaType="java.lang.Long" jdbcType="BIGINT"/>
+        <id column="id" javaType="java.lang.Long" jdbcType="BIGINT"/>
         <result column="name" javaType="java.lang.String" jdbcType="VARCHAR"/>
         <result column="password" javaType="java.lang.String" jdbcType="VARCHAR"/>
         <result column="alias" javaType="java.lang.String" jdbcType="VARCHAR"/>

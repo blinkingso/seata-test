@@ -9,7 +9,7 @@ spring:
     type: com.zaxxer.hikari.HikariDataSource
 server:
   servlet:
-    context-path: /user
+    context-path: /
   port: 8080
 mybatis:
   type-aliases-package: com.yz.pojo
